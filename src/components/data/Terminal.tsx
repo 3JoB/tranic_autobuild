@@ -21,6 +21,7 @@ function InfoLog({ children }: { children: ReactNode }) {
 export function Terminal({ project }: ProjectProps) {
   const [cmd, setCmd] = useState("");
   const [args, setArgs] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [loading, setLoading] = useState("");
   const [output, setOutput] = useState<ReactNode>(null);
   const [success, setSuccess] = useState<ReactNode>(null);
@@ -38,8 +39,7 @@ export function Terminal({ project }: ProjectProps) {
       let currentCmdOutput;
       switch (event.currentTarget.value) {
         case "help": {
-          currentCmdOutput =
-            "Existing commands: help, downloads, plugins, docs, forums, team, contribute";
+          currentCmdOutput = "Existing commands: help, downloads";
           break;
         }
         case "downloads": {
@@ -47,7 +47,7 @@ export function Terminal({ project }: ProjectProps) {
           currentCmdOutput = "Redirecting...";
           break;
         }
-        case "plugins": {
+        /*case "plugins": {
           window.location.href = "https://hangar.papermc.io";
           currentCmdOutput = "Redirecting...";
           break;
@@ -56,13 +56,13 @@ export function Terminal({ project }: ProjectProps) {
           window.location.href = "https://docs.papermc.io";
           currentCmdOutput = "Redirecting...";
           break;
-        }
-        case "forums": {
+        }*/
+        /*case "forums": {
           window.location.href = "https://forums.papermc.io";
           currentCmdOutput = "Redirecting...";
           break;
-        }
-        case "team": {
+        }*/
+        /*case "team": {
           window.location.href = "/team";
           currentCmdOutput = "Redirecting...";
           break;
@@ -71,7 +71,7 @@ export function Terminal({ project }: ProjectProps) {
           window.location.href = "/contribute";
           currentCmdOutput = "Redirecting...";
           break;
-        }
+        }*/
         default: {
           currentCmdOutput = 'Unknown command. Type "help" for help.';
         }
@@ -88,36 +88,26 @@ export function Terminal({ project }: ProjectProps) {
   };
 
   useEffect(() => {
-    const outputLines = [
-      `Starting minecraft server version ${project.latestStableVersion}`,
-      'Preparing level "world"',
-      "Preparing start region for dimension minecraft:overworld",
-      "Time elapsed: 363 ms",
-      "Preparing start region for dimension minecraft:the_nether",
-      "Time elapsed: 147 ms",
-      "Preparing start region for dimension minecraft:the_end",
-      "Time elapsed: 366 ms",
-      "Running delayed init tasks",
-    ];
+    const outputLines = [`Listening on: http://[::]:7743/`];
 
     (async () => {
       let currentCmd = "";
-      for (const char of "java") {
+      for (const char of "sudo") {
         currentCmd += char;
         setCmd(currentCmd);
         await sleep(getNaturalDelay());
       }
 
       let currentArgs = "";
-      for (const char of " -jar paper.jar") {
+      for (const char of " ./Mars") {
         currentArgs += char;
         setArgs(currentArgs);
         await sleep(getNaturalDelay());
       }
 
       for (let i = 0; i < 3; i++) {
-        setLoading("Loading libraries, please wait" + ".".repeat(i + 1));
-        await sleep(500);
+        //setLoading("Loading libraries, please wait" + ".".repeat(i + 1));
+        await sleep(10);
       }
 
       let currentOutput: ReactNode[] = [];
@@ -134,7 +124,7 @@ export function Terminal({ project }: ProjectProps) {
       setSuccess(
         <InfoLog>
           <span className="text-green-400">
-            Done (2.274s)! For help, type &quot;help&quot;
+            Done (0.014s)! For help, type &quot;help&quot;
           </span>
         </InfoLog>,
       );

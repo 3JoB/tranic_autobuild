@@ -4,11 +4,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-import LogoMarkerDark from "@/assets/brand/logo-marker-dark.svg";
-import LogoMarkerLight from "@/assets/brand/logo-marker-light.svg";
-import DiscordIcon from "@/assets/icons/fontawesome/discord-brands.svg";
+//import LogoMarkerDark from "@/assets/brand/logo-marker-dark.svg";
+//import LogoMarkerLight from "@/assets/brand/logo-marker-light.svg";
+import Logo from "@/assets/brand/logo.svg";
 import GitHubIcon from "@/assets/icons/fontawesome/github-brands.svg";
-import TwitterIcon from "@/assets/icons/fontawesome/twitter-brands.svg";
 import ExternalUrlIcon from "@/assets/icons/heroicons/arrow-top-right-on-square.svg";
 import MenuIcon from "@/assets/icons/heroicons/menu.svg";
 import IconButton from "@/components/input/IconButton";
@@ -62,14 +61,15 @@ const NavBar = ({ component }: NavBarProps) => {
           <MenuIcon className="w-6 h-6 fill-gray-500" />
         </button>
         <Link href="/" className="leading-0" tabIndex={-1} aria-hidden={true}>
-          <LogoMarkerLight
+          <Logo className="h-12 cursor-pointer" alt="Tranic" />
+          {/*<LogoMarkerLight
             className="block dark:hidden h-12 cursor-pointer"
             alt="PaperMC"
           />
           <LogoMarkerDark
             className="hidden dark:block h-12 cursor-pointer"
             alt="PaperMC"
-          />
+          />*/}
         </Link>
         <div
           className={clsx(
@@ -78,60 +78,27 @@ const NavBar = ({ component }: NavBarProps) => {
           )}
         >
           <NavDropDown label="Software">
-            <NavDropDownLink href="/software/paper">Paper</NavDropDownLink>
-            <NavDropDownLink href="/software/folia">Folia</NavDropDownLink>
-            <NavDropDownLink href="/software/velocity">
-              Velocity
+            <NavDropDownLink href="/software/levelbukkit">
+              LevelBukkit
             </NavDropDownLink>
-            <NavDropDownLink href="/software/waterfall" eol>
-              Waterfall
-            </NavDropDownLink>
+            <NavDropDownLink href="/software/vine">Vine</NavDropDownLink>
+            <NavDropDownLink href="/software/mars">Mars</NavDropDownLink>
           </NavDropDown>
           <NavLink
-            href="https://hangar.papermc.io/"
-            target="_blank"
-            className="inline-flex items-center"
-          >
-            Plugins
-            <ExternalUrlIcon className="h-4 w-4 ml-1 align-sub" />
-          </NavLink>
-          <NavLink
-            href="https://docs.papermc.io/"
+            href="https://docs.tranic.one/"
             target="_blank"
             className="inline-flex items-center"
           >
             Docs
             <ExternalUrlIcon className="h-4 w-4 ml-1 align-sub" />
           </NavLink>
-          <NavLink
-            href="https://forums.papermc.io/"
-            target="_blank"
-            className="inline-flex items-center"
-          >
-            Forums
-            <ExternalUrlIcon className="h-4 w-4 ml-1 align-sub" />
-          </NavLink>
-          <NavLink href="/team">Team</NavLink>
-          <NavLink href="/contribute">Contribute</NavLink>
         </div>
 
         <div className="flex-grow" />
         <IconButton
-          icon={DiscordIcon}
-          label="Discord"
-          href="https://discord.gg/papermc"
-          external
-        />
-        <IconButton
           icon={GitHubIcon}
           label="GitHub"
-          href={softwareProps?.github || "https://github.com/PaperMC"}
-          external
-        />
-        <IconButton
-          icon={TwitterIcon}
-          label="Twitter"
-          href="https://twitter.com/PaperPowered"
+          href={softwareProps?.github || "https://github.com/LevelTranic"}
           external
         />
       </div>

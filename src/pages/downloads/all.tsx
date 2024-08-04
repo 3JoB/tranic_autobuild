@@ -7,7 +7,7 @@ import SEO from "@/components/util/SEO";
 import type { Project } from "@/lib/service/types";
 import { useVersionBuilds, getProject, useProject } from "@/lib/service/v2";
 
-const INITIAL_PROJECT = "paper";
+const INITIAL_PROJECT = "levelbukkit";
 
 interface LegacyDownloadProps {
   initialProjectId: string;
@@ -16,7 +16,7 @@ interface LegacyDownloadProps {
 
 export const getStaticProps: GetStaticProps<LegacyDownloadProps> = async () => {
   const project: Project = await getProject(INITIAL_PROJECT);
-  const versions = project.versions;
+  const versions: string[] = project.versions;
   return {
     props: {
       initialProjectId: project.project_id,
@@ -34,7 +34,7 @@ const LegacyDownloads: NextPage<LegacyDownloadProps> = ({
   const { data: builds } = useVersionBuilds(selectedProject, selectedVersion);
   const { data: versions } = useProject(selectedProject);
 
-  const eol = selectedProject === "waterfall";
+  //const eol = selectedProject === "waterfall";
   const latestVersion = versions?.versions[versions?.versions.length - 1];
   const legacy = selectedVersion !== latestVersion;
   const experimental =
@@ -44,7 +44,7 @@ const LegacyDownloads: NextPage<LegacyDownloadProps> = ({
     <>
       <SEO
         title="Build explorer"
-        description="Build explorer for PaperMC projects. Proceed with caution!"
+        description="Build explorer for TranicSoft projects. Proceed with caution!"
         keywords={[]}
       />
       <div className="flex flex-col h-screen">
@@ -74,16 +74,16 @@ const LegacyDownloads: NextPage<LegacyDownloadProps> = ({
                 </div>
               </>
             )}
-            {eol && (
+            {/*eol && (
               <div className="text-center px-4 py-2 font-bold bg-yellow-400 dark:bg-yellow-500 shadow-md">
                 EOL builds are not supported. Proceed at your own risk!
               </div>
-            )}
+            )*/}
             <SoftwareBuildsTable
               project={selectedProject}
               version={selectedVersion}
               builds={builds?.builds ?? []}
-              eol={eol}
+              //eol={eol}
             />
           </div>
         </div>

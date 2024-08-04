@@ -18,6 +18,7 @@ export interface SoftwareHeaderProps {
 const SoftwareHeader = ({
   id,
   name,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   versionGroup,
   icon: Icon,
   header,
@@ -55,18 +56,10 @@ const SoftwareHeader = ({
         </Button>
         <Button
           variant="outlined"
-          href={`https://docs.papermc.io/${id}`}
+          href={`https://docs.tranic.one/${id}`}
           external
         >
           Documentation
-        </Button>
-        <Button
-          variant="outlined"
-          href={`https://jd.papermc.io/${id}/${versionGroup}`}
-          className="hidden md:block"
-          external
-        >
-          Javadoc
         </Button>
       </div>
     </div>

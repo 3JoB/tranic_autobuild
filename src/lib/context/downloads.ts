@@ -33,7 +33,7 @@ export interface HangarProjectProps extends ProjectProps {
 }
 
 export const DownloadsContext = createContext<DownloadsContextProps>({
-  projectId: "paper",
+  projectId: "vine",
   project: undefined,
   builds: undefined,
   version: "",
@@ -54,7 +54,7 @@ const isVersionStable = async (
 
 export const getProjectProps = (
   id: string,
-  hangarProject: boolean = true,
+  hangarProject: boolean = false,
 ): GetStaticProps => {
   return async () => {
     const { project_name, versions, version_groups } = await getProject(id);

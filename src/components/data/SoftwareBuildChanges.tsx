@@ -47,7 +47,9 @@ const highlightIssues = (
       <a
         key={i}
         className={highlightClass}
-        href={`https://github.com/PaperMC/${project}/issues/${part.slice(1)}`}
+        href={`https://github.com/LevelTranic/${project}/issues/${part.slice(
+          1,
+        )}`}
         target="_blank"
         rel="noreferrer"
       >

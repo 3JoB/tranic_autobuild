@@ -1,35 +1,41 @@
 import type { NextPage } from "next";
-import Image from "next/image";
+//import Image from "next/image";
 
-import PaperIcon from "@/assets/brand/paper.svg";
-import VelocityIcon from "@/assets/brand/velocity.svg";
-import HomeImage1 from "@/assets/images/home-1.png";
-import HomeImage2 from "@/assets/images/home-2.png";
-import HomeImage3 from "@/assets/images/home-3.png";
-import Skeleton from "@/components/data/Skeleton";
+import FoliaIcon from "@/assets/brand/logo.svg";
+import PaperIcon from "@/assets/brand/vine.svg";
+//import HomeImage1 from "@/assets/images/home-1.png";
+//import HomeImage2 from "@/assets/images/home-2.png";
+//import HomeImage3 from "@/assets/images/home-3.png";
+//import Skeleton from "@/components/data/Skeleton";
 import SoftwarePreview from "@/components/data/SoftwarePreview";
 import { Terminal } from "@/components/data/Terminal";
 import Button from "@/components/input/Button";
 import SEO from "@/components/util/SEO";
 import { getProjectProps, type ProjectProps } from "@/lib/context/downloads";
-import { useBstatsPlayers } from "@/lib/service/bstats";
+//import { useBstatsPlayers } from "@/lib/service/bstats";
 
 const Home: NextPage<ProjectProps> = ({ project }) => {
-  const { data: playerData } = useBstatsPlayers();
+  //const { data: playerData } = useBstatsPlayers();
 
   return (
     <>
       <SEO
         title="Home"
-        description="PaperMC is a Minecraft software organization focusing on improving
-          the game’s ecosystem with faster and more secure software."
-        keywords={["papermc", "paper", "velocity", "minecraft", "performance"]}
+        description="powered by TranicSoft Studio"
+        keywords={[
+          "tranic",
+          "tranicsoft",
+          "levelbukkit",
+          "vineserver",
+          "minecraft",
+          "performance",
+        ]}
       />
       <header className="max-w-7xl flex flex-row mx-auto px-4 pt-32 pb-26 lg:(pt-48 pb-46)">
         <div className="flex-1">
           <h1 className="font-medium leading-normal lg:(text-5xl leading-normal) text-4xl">
-            Modern software. <br />
-            <span className="text-blue-500">Built to perform.</span>
+            Infrastructure supply. <br />
+            <span className="text-blue-500">Lightweight alternative.</span>
           </h1>
           <p className="text-xl mt-4">
             PaperMC improves Minecraft’s ecosystem with fast, secure software
@@ -41,7 +47,7 @@ const Home: NextPage<ProjectProps> = ({ project }) => {
             <Button variant="filled" href="/downloads">
               Downloads
             </Button>
-            <Button variant="outlined" href="https://docs.papermc.io" external>
+            <Button variant="outlined" href="https://docs.tranic.one" external>
               Documentation
             </Button>
           </div>
@@ -61,21 +67,21 @@ const Home: NextPage<ProjectProps> = ({ project }) => {
           </h2>
           <div className="grid md:(grid-cols-3 -ml-4) gap-2 px-2 xl:gap-4">
             <SoftwarePreview
-              id="paper"
-              name="Paper"
+              id="vine"
+              name="Vine"
               icon={PaperIcon}
-              description="Paper is a Minecraft game server based on Spigot, designed to greatly improve performance and offer more advanced features and API."
+              description="Vine is a Minecraft game server based on ShreddedPaper, designed to greatly improve performance and offer more advanced features and API."
             />
             <SoftwarePreview
-              id="velocity"
-              name="Velocity"
-              icon={VelocityIcon}
-              description="Velocity is a high-performance, scalable Minecraft proxy server that allows players to connect to multiple Minecraft servers under the proxy."
+              id="levelbukkit"
+              name="LevelBukkit"
+              icon={FoliaIcon}
+              description="LevelBukkit is a new fork of Luminol/Folia that adds regionized multithreading to the server."
             />
           </div>
         </div>
       </section>
-      <section
+      {/*<section
         id="facts"
         className="flex flex-col max-w-7xl mx-auto px-4 py-8 gap-8 md:(gap-12 py-16)"
       >
@@ -166,11 +172,11 @@ const Home: NextPage<ProjectProps> = ({ project }) => {
             </p>
           </div>
         </div>
-      </section>
+      </section>*/}
     </>
   );
 };
 
 export default Home;
 
-export const getStaticProps = getProjectProps("paper");
+export const getStaticProps = getProjectProps("vine");

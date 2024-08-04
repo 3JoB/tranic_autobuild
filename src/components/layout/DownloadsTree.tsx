@@ -61,9 +61,9 @@ interface DownloadsTreeProps {
 const DownloadsTree = (props: DownloadsTreeProps) => {
   return (
     <nav className="w-50 p-2 border-r border-gray-300 overflow-auto">
-      <ProjectSubTree id="paper" name="Paper" {...props} />
-      <ProjectSubTree id="velocity" name="Velocity" {...props} />
-      <ProjectSubTree id="waterfall" name="Waterfall" eol {...props} />
+      <ProjectSubTree id="mars" name="mars" {...props} />
+      <ProjectSubTree id="levelbukkit" name="levelbukkit" {...props} />
+      <ProjectSubTree id="vine" name="vine" eol {...props} />
     </nav>
   );
 };

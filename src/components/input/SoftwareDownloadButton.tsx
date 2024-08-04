@@ -67,7 +67,7 @@ const SoftwareDownloadButton = ({
               projectId,
               version,
               build.build,
-              build.downloads["application"].name,
+              "bundler",
             )
           }
           target="_blank"

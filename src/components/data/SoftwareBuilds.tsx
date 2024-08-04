@@ -39,7 +39,7 @@ const SoftwareBuilds = ({
                 project,
                 version,
                 build.build,
-                build.downloads["application"].name,
+                "bundler",
               )}
               target="_blank"
               className={clsx(
