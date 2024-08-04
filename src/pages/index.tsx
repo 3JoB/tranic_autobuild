@@ -37,12 +37,12 @@ const Home: NextPage<ProjectProps> = ({ project }) => {
             Infrastructure supply. <br />
             <span className="text-blue-500">Lightweight alternative.</span>
           </h1>
-          <p className="text-xl mt-4">
+          {/*<p className="text-xl mt-4">
             PaperMC improves Minecraft’s ecosystem with fast, secure software
             and an expanding plugin API, providing quick releases and helpful
             support as the most widely used, performant, and stable software
             available.
-          </p>
+          </p>*/}
           <div className="flex flex-row gap-4 mt-8">
             <Button variant="filled" href="/downloads">
               Downloads
