@@ -28,13 +28,13 @@ const Downloads: NextPage = () => {
             id="vine"
             name="Vine"
             icon={PaperIcon}
-            description="Paper is a Minecraft game server, designed to greatly improve performance and offer more advanced features and API."
+            description="Vine is a Minecraft game server based on ShreddedPaper, designed to greatly improve performance and offer more advanced features and API."
           />
           <SoftwarePreview
             id="levelbukkit"
             name="LevelBukkit"
             icon={FoliaIcon}
-            description="Folia is a new fork of Paper that adds regionized multithreading to the server. Access to Folia builds isn't currently available."
+            description="LevelBukkit is a new fork of Luminol/Folia that adds regionized multithreading to the server."
           />
         </div>
         <h2 className="text-2xl text-center font-medium mt-4">
