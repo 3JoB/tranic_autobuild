@@ -17,7 +17,7 @@ const SoftwareBuildChanges = ({
     {build.changes.map((change) => (
       <p key={change.commit}>
         <a
-          href={`https://github.com/PaperMC/${project}/commit/${change.commit}`}
+          href={`https://github.com/LevelTranic/${project}/commit/${change.commit}`}
           className={styles.commit}
           rel="noreferrer"
           target="_blank"
