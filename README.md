@@ -1,4 +1,4 @@
-# papermc.io
+# tranic.one
 
 ## Development
 
