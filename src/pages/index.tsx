@@ -3,20 +3,13 @@ import type { NextPage } from "next";
 
 import FoliaIcon from "@/assets/brand/logo.svg";
 import PaperIcon from "@/assets/brand/vine.svg";
-//import HomeImage1 from "@/assets/images/home-1.png";
-//import HomeImage2 from "@/assets/images/home-2.png";
-//import HomeImage3 from "@/assets/images/home-3.png";
-//import Skeleton from "@/components/data/Skeleton";
 import SoftwarePreview from "@/components/data/SoftwarePreview";
 import { Terminal } from "@/components/data/Terminal";
 import Button from "@/components/input/Button";
 import SEO from "@/components/util/SEO";
 import { getProjectProps, type ProjectProps } from "@/lib/context/downloads";
-//import { useBstatsPlayers } from "@/lib/service/bstats";
 
 const Home: NextPage<ProjectProps> = ({ project }) => {
-  //const { data: playerData } = useBstatsPlayers();
-
   return (
     <>
       <SEO
