@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import PaperIcon from "@/assets/brand/vine.svg";
 import BoltIcon from "@/assets/icons/heroicons/bolt.svg";
 import ChatBubbleLeftRightIcon from "@/assets/icons/heroicons/chat-bubble-left-right.svg";
+import CodeBracketIcon from "@/assets/icons/heroicons/code-bracket.svg";
 import FeatureCard from "@/components/data/FeatureCard";
 import SoftwareHeader from "@/components/layout/SoftwareHeader";
 import SEO from "@/components/util/SEO";
@@ -14,10 +15,13 @@ const PaperHome = ({ project }: HangarProjectProps): ReactElement => {
     <>
       <SEO
         title="Vine"
-        description="Vine is a Minecraft game server based on ShreddedPaper, designed to greatly improve performance and offer more advanced features and API."
+        description="Subarea multithread, single server. Bring more extensions on ShreddedPaper."
         keywords={[
-          "papermc",
-          "paper",
+          "tranicmc",
+          "tranic",
+          "multithread",
+          "shreddedpaper",
+          "purpur",
           "server",
           "minecraft",
           "performance",
@@ -32,12 +36,12 @@ const PaperHome = ({ project }: HangarProjectProps): ReactElement => {
         icon={PaperIcon}
         header={
           <>
-            Multi-threaded
+            Subarea Multi-thread
             <br />
             <span className="text-blue-500">single Minecraft Server</span>
           </>
         }
-        description="Vine is a Minecraft game server based on ShreddedPaper, designed to greatly improve performance and offer more advanced features and API."
+        description="Bring more extensions, optimizations, and repair on ShreddedPaper."
       />
       <section
         id="why"
@@ -57,6 +61,11 @@ const PaperHome = ({ project }: HangarProjectProps): ReactElement => {
               icon={ChatBubbleLeftRightIcon}
               label="Is Vine for you?"
               description="Vine is suitable for small and medium-sized servers with a relatively concentrated number of players. It is still experimental, so please pay attention to updates in time."
+            />
+            <FeatureCard
+              icon={CodeBracketIcon}
+              label="Is it suitable for the existing plugin ecology??"
+              description="My answer is, no."
             />
           </div>
         </div>
