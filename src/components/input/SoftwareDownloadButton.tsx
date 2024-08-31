@@ -67,7 +67,7 @@ const SoftwareDownloadButton = ({
               projectId,
               version,
               build.build,
-              "bundler",
+              "paperclip",
             )
           }
           target="_blank"

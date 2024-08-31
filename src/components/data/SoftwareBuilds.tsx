@@ -39,7 +39,7 @@ const SoftwareBuilds = ({
                 project,
                 version,
                 build.build,
-                "bundler",
+                "paperclip",
               )}
               target="_blank"
               className={clsx(
