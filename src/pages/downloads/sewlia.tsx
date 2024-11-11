@@ -10,7 +10,7 @@ const PaperDownloads = ({ project }: ProjectProps): ReactElement => {
   return (
     <>
       <SEO
-        title="LSewlia Downloads"
+        title="Sewlia Downloads"
         description="Download Sewlia, our Minecraft server software offering unrivaled performance and stability."
         keywords={[
           "tranic",
