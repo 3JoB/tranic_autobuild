@@ -29,6 +29,15 @@ const Footer = () => (
                 GitHub
               </a>
             </li>
+            <li>
+              <a
+                href="https://discord.gg/dBbSbv2Vuz"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Discord
+              </a>
+            </li>
           </ul>
         </div>
       </div>

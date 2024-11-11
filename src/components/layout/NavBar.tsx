@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 //import LogoMarkerDark from "@/assets/brand/logo-marker-dark.svg";
 //import LogoMarkerLight from "@/assets/brand/logo-marker-light.svg";
 import Logo from "@/assets/brand/logo.svg";
+import DiscordIcon from "@/assets/icons/fontawesome/discord-brands.svg";
 import GitHubIcon from "@/assets/icons/fontawesome/github-brands.svg";
 import ExternalUrlIcon from "@/assets/icons/heroicons/arrow-top-right-on-square.svg";
 import MenuIcon from "@/assets/icons/heroicons/menu.svg";
@@ -95,6 +96,12 @@ const NavBar = ({ component }: NavBarProps) => {
         </div>
 
         <div className="flex-grow" />
+        <IconButton
+          icon={DiscordIcon}
+          label="Discord"
+          href="https://discord.gg/dBbSbv2Vuz"
+          external
+        />
         <IconButton
           icon={GitHubIcon}
           label="GitHub"
