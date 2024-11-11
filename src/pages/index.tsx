@@ -70,6 +70,13 @@ const Home: NextPage<ProjectProps> = ({ project }) => {
               name="LevelBukkit"
               icon={FoliaIcon}
               description="LevelBukkit is a new fork of Luminol/Folia that adds regionized multithreading to the server."
+              eol
+            />
+            <SoftwarePreview
+              id="sewlia"
+              name="Sewlia"
+              icon={FoliaIcon}
+              description="Sewlia is a new fork of Folia that adds regionized multithreading to the server."
             />
           </div>
         </div>

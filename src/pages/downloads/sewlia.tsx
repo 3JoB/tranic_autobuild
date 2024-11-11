@@ -10,23 +10,23 @@ const PaperDownloads = ({ project }: ProjectProps): ReactElement => {
   return (
     <>
       <SEO
-        title="LevelBukkit Downloads"
-        description="Download LevelBukkit, our Minecraft server software offering unrivaled performance and stability."
+        title="LSewlia Downloads"
+        description="Download Sewlia, our Minecraft server software offering unrivaled performance and stability."
         keywords={[
           "tranic",
           "minecraft",
           "performance",
-          "vine",
+          "sewlia",
           "downloads",
           "jar",
         ]}
       />
       <SoftwareDownload
-        id="levelbukkit"
+        id="sewlia"
         project={project}
         icon={PaperIcon}
-        description="Download Levelbukkit, our Minecraft server software offering unrivaled performance and stability."
-        experimentalWarning="Download experimental builds of LevelBukkit, our Minecraft server software offering unrivaled performance and stability. Proceed with caution!"
+        description="Download Sewlia, our Minecraft server software offering unrivaled performance and stability."
+        experimentalWarning="Download experimental builds of Sewlia, our Minecraft server software offering unrivaled performance and stability. Proceed with caution!"
         eol
       />
     </>
@@ -35,4 +35,4 @@ const PaperDownloads = ({ project }: ProjectProps): ReactElement => {
 
 export default PaperDownloads;
 
-export const getStaticProps = getProjectProps("levelbukkit");
+export const getStaticProps = getProjectProps("sewlia");
