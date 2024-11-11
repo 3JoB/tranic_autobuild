@@ -34,7 +34,6 @@ const SewliaHome = ({ project }: HangarProjectProps): ReactElement => {
         icon={FoliaIcon}
         header={<>What is Sewlia?</>}
         description="Sewlia is a new fork of Folia that adds regionized multithreading to the server."
-        eol
       />
       <section
         id="why"

@@ -27,7 +27,6 @@ const PaperDownloads = ({ project }: ProjectProps): ReactElement => {
         icon={PaperIcon}
         description="Download Sewlia, our Minecraft server software offering unrivaled performance and stability."
         experimentalWarning="Download experimental builds of Sewlia, our Minecraft server software offering unrivaled performance and stability. Proceed with caution!"
-        eol
       />
     </>
   );
